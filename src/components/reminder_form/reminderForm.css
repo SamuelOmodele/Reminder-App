@@ -1,0 +1,130 @@
+form .form-row{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+form .form-row .form-group{
+    position: relative;
+}
+.form-group .word-length{
+    position: absolute;
+    top: 36px;
+    right: 10px;
+    font-size: 12px;
+    color: #444;
+}
+.size1{
+    width: 33%;
+    margin-right: 15px;
+}
+.size2{
+    width: 66%;
+}
+.form-row .form-group label{
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.form-row .form-group input{
+    width: 100%;
+    border: 1px solid #cac9d9;
+    font-size: 14px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    outline: none;
+}
+.form-row .form-group input:focus{
+    border: 1.35px solid #4917b7;
+}
+.form-row .button-group{
+    display: flex;
+    align-items: flex-end;
+    width: calc(33% - 15px);
+}
+.form-row .button-group button{
+    height: 70%;
+    width: 100%;
+    color: #fff;
+    background-color: #4917b7;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.form-row .button-group button:hover{
+    background-color: #6144a1;
+}
+.form-row .button-group button span{
+    font-size: 21px;
+}
+.reminder-status{
+    font-size: 14px;
+    margin-top: 20px;
+}
+span.purple-color{
+    color: #4917b7;
+    font-weight: 600;
+}
+.err-msg{
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 700px){
+    .form-group .word-length{
+        top: 20px;
+        right: 12px;
+        background-color: #fff;
+        font-size: 11px;
+        padding: 0 5px;
+    }
+    .form-row .form-group input{
+        font-size: 12px;
+    }
+    .form-row .button-group button {
+        font-size: 13px;
+        gap: 5px;
+    }
+    .form-row .button-group button span{
+        display: none;
+    }
+}
+@media screen and (max-width: 530px){
+    .form-row .form-group label{
+        font-size: 14px;
+    }
+    .form-row .form-group input{
+        border-radius: 2px;
+        font-size: 13px;
+    }
+    .row1{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .row1 .size1, .row1 .size2{
+        width: 100%;
+        margin-right: 0;
+    }
+    .row2{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .row2 .size1{
+        width: 47%;
+        margin-right: 0;
+    }
+    .form-row .button-group{
+        width: 100%;
+    }
+    .form-row .button-group button{
+        padding: 20px 0;
+    }
+}
