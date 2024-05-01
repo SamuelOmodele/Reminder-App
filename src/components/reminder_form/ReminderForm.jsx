@@ -21,10 +21,9 @@ const ReminderForm = ({reminderList, setReminderList, currentDateTimeString}) =>
 
         const currentTimeString = currentDateTimeString()[0];
         const currentDateString = currentDateTimeString()[1];
-        console.log(currentTimeString);
 
         // -- input validation (endure non-empty fields and reminder due time is not in the past ) --
-        if (title === '' || description === '' || date === '' || time === ''){
+        if (title === '' || description === '' || date === '' || time === '' || longTime === null){
             setValidationMsg('All Input fields must be filled!');
         }else if (currentDateString > date || (currentDateString === date && currentTimeString > time)){
             setValidationMsg('Cannot set reminder to a past date');
