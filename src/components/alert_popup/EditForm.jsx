@@ -27,7 +27,7 @@ const EditForm = ({ reminder, setRemToBeEdited, reminderList, setReminderList, c
     const currentTimeString = currentDateTimeString()[0];
     const currentDateString = currentDateTimeString()[1];
 
-    // -- input validation (endure non-empty fields and reminder due time is not in the past ) --
+    // -- input validation (ensure non-empty fields and reminder due time is not in the past ) --
     if (title === '' || description === '' || date === '' || time === '' || longTime === null) {
       setValidationMsg('All Input fields must be filled!');
     } else if (currentDateString > date || (currentDateString === date && currentTimeString > time)) {
