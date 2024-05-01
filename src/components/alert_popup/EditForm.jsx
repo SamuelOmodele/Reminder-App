@@ -17,7 +17,6 @@ const EditForm = ({ reminder, setRemToBeEdited, reminderList, setReminderList, c
     setDescription(reminder.description);
     setDate(reminder.date);
     setTime(reminder.time);
-    setLongTime(reminder.longTime);
   }, [])
 
   // -- Edit reminder in the reminder list
