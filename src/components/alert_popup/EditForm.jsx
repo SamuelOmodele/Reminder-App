@@ -28,7 +28,7 @@ const EditForm = ({ reminder, setRemToBeEdited, reminderList, setReminderList, c
     const currentDateString = currentDateTimeString()[1];
 
     // -- input validation (endure non-empty fields and reminder due time is not in the past ) --
-    if (title === '' || description === '' || date === '' || time === '') {
+    if (title === '' || description === '' || date === '' || time === '' || longTime === null) {
       setValidationMsg('All Input fields must be filled!');
     } else if (currentDateString > date || (currentDateString === date && currentTimeString > time)) {
       setValidationMsg('Cannot set reminder to a past date');
